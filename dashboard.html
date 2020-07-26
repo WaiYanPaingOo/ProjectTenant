@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ProjectTenentConnection</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <script type="text/javascript" src="js/main.js"></script>
+        
+        <script>
+
+          window.onload = function () {
+          
+          var chart = new CanvasJS.Chart("ElectricChartContainer", {
+            animationEnabled: true,
+            theme: "light2", // "light1", "light2", "dark1", "dark2"
+            title:{
+            text: "Electricity Bill"
+            },
+            axisY: {
+            title: ""
+            },
+            data: [{        
+            type: "column",  
+            showInLegend: true,
+            legendMarkerColor: "cadetblue",
+            legendText: "July - S$360.80",
+            dataPoints: [      
+              { y: 184.84, label: "Jan" },
+              { y: 193.19,  label: "Feb" },
+              { y: 216.22,  label: "Mar" },
+              { y: 201.83,  label: "Apr" },
+              { y: 182.09,  label: "May" },
+              { y: 200.73, label: "Jun" },
+              { y: 360.80,  label: "Jul" },
+              { y: 0,  label: "Aug" },
+              { y: 0,  label: "Sep" },
+              { y: 0,  label: "Oct" },
+              { y: 0,  label: "Nov" },
+              { y: 0,  label: "Dec" }
+            ]
+            }]
+          });
+          chart.render();
+          
+                    
+          var chart = new CanvasJS.Chart("WaterChartContainer", {
+            animationEnabled: true,
+            theme: "light2", // "light1", "light2", "dark1", "dark2"
+            title:{
+            text: "Water Bill"
+            },
+            axisY: {
+            title: ""
+            },
+            data: [{        
+            type: "column",  
+            showInLegend: true,
+            legendMarkerColor: "cadetblue",
+            legendText: "July - S$98.45",
+            dataPoints: [      
+              { y: 126.90, label: "Jan" },
+              { y: 90.53,  label: "Feb" },
+              { y: 82.87,  label: "Mar" },
+              { y: 86.70,  label: "Apr" },
+              { y: 81.23,  label: "May" },
+              { y: 89.71, label: "Jun" },
+              { y: 98.45,  label: "Jul" },
+              { y: 0,  label: "Aug" },
+              { y: 0,  label: "Sep" },
+              { y: 0,  label: "Oct" },
+              { y: 0,  label: "Nov" },
+              { y: 0,  label: "Dec" }
+            ]
+            }]
+          });
+          chart.render();
+          
+          var chart = new CanvasJS.Chart("GasChartContainer", {
+            animationEnabled: true,
+            theme: "light2", // "light1", "light2", "dark1", "dark2"
+            title:{
+            text: "Gas Bill"
+            },
+            axisY: {
+            title: ""
+            },
+            data: [{        
+            type: "column",  
+            showInLegend: true,
+            legendMarkerColor: "cadetblue",
+            legendText: "July - S$35.37",
+            dataPoints: [      
+              { y: 14.10, label: "Jan" },
+              { y: 11.37,  label: "Feb" },
+              { y: 16.03,  label: "Mar" },
+              { y: 13.76,  label: "Apr" },
+              { y: 12.83,  label: "May" },
+              { y: 14.20, label: "Jun" },
+              { y: 35.37,  label: "Jul" },
+              { y: 0,  label: "Aug" },
+              { y: 0,  label: "Sep" },
+              { y: 0,  label: "Oct" },
+              { y: 0,  label: "Nov" },
+              { y: 0,  label: "Dec" }
+            ]
+            }]
+          });
+          chart.render();
+        }
+
+      </script>
+
+    </head>
+    <body>
+        <div id="viewport">
+            <!-- Sidebar -->
+            <div id="sidebar">
+              <header>
+                <a href="#">HomePlus</a>
+              </header>
+              <ul class="nav">
+                <li>
+                  <a href="dashboard.html">
+                    <i class="fa fa-home"></i> Dashboard
+                  </a>
+                </li>
+                <hr size="1" class="nav-breaker"></hr>
+                <li>
+                  <a href="task.html">
+                    <i class="fa fa-tasks"></i> Tasks
+                  </a>
+                </li>
+                <hr size="1" class="nav-breaker"></hr>
+                <li>
+                  <a href="finance.html">
+                    <i class="fa fa-usd"></i> Finance
+                  </a>
+                </li>
+                <hr size="1" class="nav-breaker"></hr>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-comments"></i> Discussion
+                  </a>
+                </li>
+                <hr size="1" class="nav-breaker"></hr>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-child"></i> Agreement
+                  </a>
+                </li>
+                <hr size="1" class="nav-breaker"></hr>
+              </ul>
+            </div>
+            <!-- Content Header -->
+            <div id="content">
+                <p id="content_heading">Dashboard</p>
+            </div>
+
+            <!-- Content -->
+            <div class="row">
+              <div class="column">
+                <div class="graph-card">
+                  <div id="ElectricChartContainer" style="height: 250px; width: 98%"></div>
+                  <div class="container">
+
+                  </div>
+                </div>
+                
+              </div>
+              <div class="column">
+                <div class="graph-card">
+                  <div id="WaterChartContainer" style="height: 250px; width: 98%"></div>
+                  <div class="container">
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="graph-card">
+                  <div id="GasChartContainer" style="height: 250px; width: 98%"></div>
+                  <div class="container">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 2nd Content -->
+            <div class="s_row">
+              <!-- Doughnut Chart -->
+              <div class="s_column">
+                <div class="s_innerrow">
+                  <!-- Money -->
+                  <div class="chart-card">
+                    <div style="background-color: rgb(238, 237, 237); margin-left: -20px; padding-left: 60px; margin-bottom: 20px;" class="container">
+                      Group Funds (SGD)
+                    </div>
+                    <div class="card_row">
+                      <div class="card_column">
+                        <div style="padding-left: 15px">
+                          <div class="loader"></div>
+                        </div>
+                        
+                        
+                      </div>
+                      <div style="text-align: center;" class="card_column">
+                        <p style="color: black; padding-top: 15px; padding-left: 3px; margin-bottom: -15px; font-size: 15px;">Total Left</p>
+                        <p style="color: green; font-size: 20px;">$300.00</p>
+                      </div>
+                      <div style="text-align: left;" class="card_column">
+                        <p style="color: black; padding-top: 15px; padding-left: 3px; margin-bottom: -15px; font-size: 15px;">Total Used</p>
+                        <p style="color: red; font-size: 20px;">$100.00</p>
+                      </div>
+                    </div>
+                    <div class="container">
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="s_innerrow">
+                  <!-- People -->
+                  <div class="chart-card">
+                    <div style="background-color: rgb(238, 237, 237); margin-left: -20px; padding-left: 40px; margin-bottom: 20px;" class="container">
+                      Currently At Home
+                    </div>
+                    <div class="card_row">
+                      <div class="card_column">
+                        <div style="padding-left: 15px">
+                          <div class="pc_loader"></div>
+                        </div>
+                        
+                        
+                      </div>
+                      <div style="text-align: center;" class="card_column">
+                        <p style="color: black; padding-top: 15px; padding-left: 3px; margin-bottom: -15px; font-size: 15px;">At Home</p>
+                        <p style="color: green; font-size: 20px;">2</p>
+                      </div>
+                      <div style="text-align: left;" class="card_column">
+                        <p style="color: black; padding-top: 15px; padding-left: 3px; margin-bottom: -15px; font-size: 15px;">Outside</p>
+                        <p style="color: red; font-size: 20px; padding-left: 20px">2</p>
+                      </div>
+                    </div>
+                    <div class="container">
+                      
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <!-- Time Chart -->
+              <div class="s_column">
+                <div class="timeline-card">
+
+                  <div style="position: relative; background-color: rgb(238, 237, 237); margin-left: -20px; padding-left: 40px; margin-bottom: 20px;" class="container">
+                    Task Timeline
+                  </div>
+
+                  <div class="card_row">
+                    <div class="timeline">
+                      <div class="t_container right">
+                        <div class="content">
+                          <div style="float: left; padding-top: 18px; margin-left: -15px; padding-right: 20px;">
+                            <img src="/image/icon_wy.JPG" style="width: 70px; height: 70px;" alt="Italian Trulli">
+                          </div>
+                          <h3>Tony</h3>
+                          <p>Has Clean the House</p>
+                        </div>
+                      </div>
+                      <div class="t_container right">
+                        <div class="content">
+                          <div style="float: left; padding-top: 18px; margin-left: -15px; padding-right: 20px;">
+                            <img src="/image/icon_gf.JPG" style="width: 70px; height: 70px;" alt="Italian Trulli">
+                          </div>
+                          <h3>Charlend</h3>
+                          <p>Has Toke out the Trash</p>
+                        </div>
+                      </div>
+                      <div class="t_container right">
+                        <div class="content">
+                          <div style="float: left; padding-top: 18px; margin-left: -15px; padding-right: 20px;">
+                            <img src="/image/icon_a.JPG" style="width: 70px; height: 70px;" alt="Italian Trulli">
+                          </div>
+                          <h3>Aung Naing Thu</h3>
+                          <p>Has Clean the House</p>
+                        </div>
+                      </div>
+                      <div class="t_container right">
+                        <div class="content">
+                          <div style="float: left; padding-top: 18px; margin-left: -15px; padding-right: 20px;">
+                            <img src="/image/icon_n.JPG" style="width: 70px; height: 70px;" alt="Italian Trulli">
+                          </div>
+                          <h3>Nan A Hwan</h3>
+                          <p>Has Filled the Soup Bottle</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="container">
+                    
+                  </div>
+
+                </div>
+              </div>
+
+
+            </div>
+
+      </body>
+</html>
+
